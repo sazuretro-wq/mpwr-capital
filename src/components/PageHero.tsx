@@ -14,7 +14,7 @@ export default function PageHero({
   description,
 }: PageHeroProps) {
   return (
-    <section className="relative flex items-end overflow-hidden bg-mpwr-dark pb-14 pt-36">
+    <section className="relative flex min-h-[42vh] items-end overflow-hidden bg-mpwr-dark pb-16 pt-36">
       {/* Subtle gradient orb */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
@@ -43,7 +43,7 @@ export default function PageHero({
               delay: 0.3,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className="font-heading text-4xl font-semibold tracking-tight text-white md:text-5xl lg:text-6xl"
+            className="font-heading text-5xl font-semibold tracking-tight text-white md:text-6xl lg:text-7xl"
           >
             {title}
           </motion.h1>

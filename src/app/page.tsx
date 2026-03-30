@@ -37,18 +37,19 @@ export default function Home() {
     <>
       {/* Hero — dark section with video-ready background */}
       <section className="relative flex min-h-screen items-center overflow-hidden bg-mpwr-dark">
-        {/* Background video — shifted right to show roads behind text */}
+        {/* Background video — shifted 30% right */}
         <video
           autoPlay
           loop
           muted
           playsInline
           className="absolute inset-0 h-full w-full object-cover"
-          style={{ objectPosition: "right 50%" }}
+          style={{ objectPosition: "75% center" }}
         >
           <source src="/images/hero-video.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-mpwr-dark/90 via-mpwr-dark/50 to-transparent" />
+        {/* Overlay: fully dark on left, fades to transparent on right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-mpwr-dark from-[45%] to-transparent" />
 
         <div className="relative z-10 mx-auto w-full max-w-[1300px] px-6 lg:px-8">
           <motion.div

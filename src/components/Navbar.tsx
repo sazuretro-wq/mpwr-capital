@@ -99,36 +99,28 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile hamburger */}
+          {/* Mobile hamburger — pure CSS, no framer-motion color bugs */}
           <button
-            className="relative z-10 lg:hidden"
+            className="relative z-10 p-1 lg:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
             <div className="flex h-5 w-6 flex-col justify-between">
-              {[0, 1, 2].map((i) => {
-                const barColor = mobileOpen ? "#fff" : onDarkHero ? "#fff" : "#1A1A1A";
-                const animateProps =
-                  i === 0
-                    ? mobileOpen
-                      ? { rotate: 45, y: 8, backgroundColor: barColor }
-                      : { rotate: 0, y: 0, backgroundColor: barColor }
-                    : i === 1
-                      ? mobileOpen
-                        ? { opacity: 0, backgroundColor: barColor }
-                        : { opacity: 1, backgroundColor: barColor }
-                      : mobileOpen
-                        ? { rotate: -45, y: -8, backgroundColor: barColor }
-                        : { rotate: 0, y: 0, backgroundColor: barColor };
-                return (
-                  <motion.span
-                    key={i}
-                    animate={animateProps}
-                    transition={{ duration: 0.3 }}
-                    className="block h-[1.5px] w-full"
-                  />
-                );
-              })}
+              <span className={`block h-[1.5px] w-full origin-center transition-all duration-300 ${
+                mobileOpen
+                  ? "translate-y-[9px] rotate-45 bg-white"
+                  : onDarkHero ? "bg-white" : "bg-mpwr-text"
+              }`} />
+              <span className={`block h-[1.5px] w-full transition-all duration-300 ${
+                mobileOpen
+                  ? "scale-x-0 opacity-0 bg-white"
+                  : onDarkHero ? "bg-white" : "bg-mpwr-text"
+              }`} />
+              <span className={`block h-[1.5px] w-full origin-center transition-all duration-300 ${
+                mobileOpen
+                  ? "-translate-y-[9px] -rotate-45 bg-white"
+                  : onDarkHero ? "bg-white" : "bg-mpwr-text"
+              }`} />
             </div>
           </button>
         </div>
