@@ -49,7 +49,7 @@ export default function Home() {
           <source src="/images/hero-video.mp4" type="video/mp4" />
         </video>
         {/* Uniform cinematic overlay */}
-        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-black/60" />
 
         {/* Centered content */}
         <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center px-6 text-center">
@@ -58,7 +58,7 @@ export default function Home() {
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="font-heading text-4xl font-semibold leading-[1.15] tracking-tight text-white md:text-6xl lg:text-[72px]"
+              className="font-heading text-4xl font-semibold leading-[1em] tracking-tight text-white md:text-6xl lg:text-[72px]"
             >
               Operators who invest.<br />
               Partners who{" "}
@@ -84,7 +84,7 @@ export default function Home() {
           >
             <a
               href="/contact"
-              className="rounded-full border border-white/30 bg-white/10 px-8 py-3.5 text-[15px] font-medium text-white backdrop-blur-sm transition-all duration-300 hover:border-white/50 hover:bg-white/20"
+              className="rounded-full bg-mpwr-red px-8 py-3.5 text-[15px] font-semibold text-white transition-all duration-300 hover:bg-mpwr-red-dark"
             >
               Get in Touch
             </a>
