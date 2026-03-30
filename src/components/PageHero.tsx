@@ -34,20 +34,14 @@ export default function PageHero({
             {subtitle}
           </motion.p>
         )}
-        <div className="overflow-hidden">
-          <motion.h1
-            initial={{ y: 60 }}
-            animate={{ y: 0 }}
-            transition={{
-              duration: 0.7,
-              delay: 0.3,
-              ease: [0.16, 1, 0.3, 1],
-            }}
-            className="font-heading text-5xl font-semibold tracking-tight text-white md:text-6xl lg:text-7xl"
-          >
-            {title}
-          </motion.h1>
-        </div>
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          className="font-heading text-4xl font-semibold tracking-tight text-white md:text-5xl lg:text-6xl"
+        >
+          {title}
+        </motion.h1>
         {description && (
           <motion.p
             initial={{ opacity: 0, y: 15 }}
