@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --font-manrope: "Manrope", sans-serif;
+  --font-opensans: "Open Sans", sans-serif;
+  --color-mpwr-red: #EA2029;
+  --color-mpwr-red-hover: #c9181f;
+  --color-mpwr-dark: #1a1a1a;
+  --color-mpwr-gold-light: #CEAD8C;
+  --color-mpwr-gold: #C5A869;
+  --color-mpwr-text: #333333;
+  --color-mpwr-footer: #2d2d2d;
+}
+
+body {
+  font-family: var(--font-opensans);
+  color: var(--color-mpwr-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-manrope);
+}
