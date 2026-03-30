@@ -35,9 +35,9 @@ const pillars = [
 export default function Home() {
   return (
     <>
-      {/* Hero — dark section with video-ready background */}
-      <section className="relative flex min-h-screen items-center overflow-hidden bg-mpwr-dark">
-        {/* Background video — shifted 30% right */}
+      {/* Hero — full-bleed centered, Voy-style */}
+      <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-mpwr-dark">
+        {/* Background video */}
         <video
           autoPlay
           loop
@@ -48,35 +48,19 @@ export default function Home() {
         >
           <source src="/images/hero-video.mp4" type="video/mp4" />
         </video>
-        {/* Overlay: fully dark on left, fades to transparent on right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-mpwr-dark from-[45%] to-transparent" />
+        {/* Uniform cinematic overlay */}
+        <div className="absolute inset-0 bg-black/45" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1300px] px-6 lg:px-8">
-          <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: "40px" }}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-6 h-[2px] bg-mpwr-red"
-          />
-
+        {/* Centered content */}
+        <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center px-6 text-center">
           <div className="overflow-hidden">
             <motion.h1
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.9, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="font-heading text-4xl leading-[1.15] font-semibold tracking-tight text-white md:text-6xl lg:text-7xl"
+              transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="font-heading text-4xl font-semibold leading-[1.15] tracking-tight text-white md:text-6xl lg:text-[72px]"
             >
-              Operators who invest.
-            </motion.h1>
-          </div>
-
-          <div className="overflow-hidden">
-            <motion.h1
-              initial={{ y: 80, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.9, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
-              className="font-heading text-4xl leading-[1.15] font-semibold tracking-tight text-white md:text-6xl lg:text-7xl"
-            >
+              Operators who invest.<br />
               Partners who{" "}
               <span className="text-mpwr-red">execute.</span>
             </motion.h1>
@@ -85,33 +69,39 @@ export default function Home() {
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.9 }}
-            className="mt-6 max-w-lg text-[15px] leading-relaxed text-white/60 md:text-base"
+            transition={{ duration: 0.7, delay: 0.8 }}
+            className="mt-6 max-w-md text-[15px] leading-relaxed text-white/65 md:text-base"
           >
-            An operator-led investment firm focused on home services and building
-            services.
+            An operator-led investment firm focused on home services and building services.
           </motion.p>
 
+          {/* Two glass pill CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 1.1 }}
-            className="mt-8 flex flex-wrap gap-4"
+            transition={{ duration: 0.7, delay: 1.05 }}
+            className="mt-9 flex flex-wrap justify-center gap-3"
           >
-            <MagneticButton href="/contact" variant="primary">
+            <a
+              href="/contact"
+              className="rounded-full border border-white/30 bg-white/10 px-8 py-3.5 text-[15px] font-medium text-white backdrop-blur-sm transition-all duration-300 hover:border-white/50 hover:bg-white/20"
+            >
               Get in Touch
-            </MagneticButton>
-            <MagneticButton href="/about" variant="outline" className="!border-white/20 !text-white hover:!border-white/40 hover:!bg-white/5">
+            </a>
+            <a
+              href="/about"
+              className="rounded-full border border-white/30 bg-white/10 px-8 py-3.5 text-[15px] font-medium text-white backdrop-blur-sm transition-all duration-300 hover:border-white/50 hover:bg-white/20"
+            >
               Learn More
-            </MagneticButton>
+            </a>
           </motion.div>
 
           {/* 10T+ stat */}
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 1.3 }}
-            className="mt-12"
+            transition={{ duration: 0.7, delay: 1.35 }}
+            className="mt-14"
           >
             <AnimatedCounter value="10T+" label="Economic Opportunity" />
           </motion.div>
@@ -129,9 +119,7 @@ export default function Home() {
             transition={{ duration: 2, repeat: Infinity }}
             className="flex flex-col items-center gap-2"
           >
-            <span className="text-[14px] tracking-wider text-white/30">
-              Scroll
-            </span>
+            <span className="text-[13px] tracking-widest text-white/30 uppercase">Scroll</span>
             <div className="h-6 w-px bg-white/20" />
           </motion.div>
         </motion.div>

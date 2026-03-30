@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -87,6 +88,7 @@ export default function Navbar() {
                 )}
               </Link>
             ))}
+            <ThemeToggle onDark={onDarkHero} />
             <Link
               href="/contact"
               className={`cursor-pointer rounded-full px-6 py-2.5 text-[14px] font-semibold transition-all duration-300 ${
@@ -134,8 +136,17 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-mpwr-dark/98 backdrop-blur-xl lg:hidden"
+            className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-1 bg-mpwr-dark/98 backdrop-blur-xl lg:hidden"
           >
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ delay: 0.35, duration: 0.3 }}
+              className="mb-6"
+            >
+              <ThemeToggle onDark={true} />
+            </motion.div>
             {[...navLinks, { href: "/contact", label: "Contact" }].map(
               (link, i) => (
                 <motion.div

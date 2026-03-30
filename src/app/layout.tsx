@@ -28,6 +28,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      {/* Prevent theme flash on load */}
+      <script dangerouslySetInnerHTML={{ __html: `(function(){var t=localStorage.getItem('mpwr-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();` }} />
       <body className={`${outfit.variable} ${inter.variable} antialiased`}>
         <Navbar />
         <main>{children}</main>
