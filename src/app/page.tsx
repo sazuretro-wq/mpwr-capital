@@ -81,18 +81,12 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 1.05 }}
             className="mt-9 flex flex-wrap justify-center gap-3"
           >
-            <a
-              href="/contact"
-              className="rounded-full bg-mpwr-red px-8 py-3.5 text-[15px] font-semibold text-white transition-all duration-300 hover:bg-mpwr-red-dark"
-            >
+            <MagneticButton href="/contact" variant="hero-primary" className="px-8 py-3.5 text-[15px]">
               Get in Touch
-            </a>
-            <a
-              href="/about"
-              className="rounded-full border border-white/30 bg-white/10 px-8 py-3.5 text-[15px] font-medium text-white backdrop-blur-sm transition-all duration-300 hover:border-white/50 hover:bg-white/20"
-            >
+            </MagneticButton>
+            <MagneticButton href="/about" variant="hero-glass" className="px-8 py-3.5 text-[15px] font-medium">
               Learn More
-            </a>
+            </MagneticButton>
           </motion.div>
 
           {/* 10T+ stat */}

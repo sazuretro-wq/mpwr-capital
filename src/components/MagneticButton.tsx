@@ -7,7 +7,7 @@ import Link from "next/link";
 interface MagneticButtonProps {
   href: string;
   children: React.ReactNode;
-  variant?: "primary" | "outline";
+  variant?: "primary" | "outline" | "hero-primary" | "hero-glass";
   className?: string;
 }
 
@@ -37,10 +37,13 @@ export default function MagneticButton({
     y.set(0);
   }
 
-  const baseStyles =
-    variant === "primary"
-      ? "bg-mpwr-red text-white hover:bg-mpwr-red-dark"
-      : "border border-mpwr-gray-200 text-mpwr-text hover:border-mpwr-text hover:bg-mpwr-off-white";
+  const variantStyles: Record<string, string> = {
+    primary: "bg-mpwr-red text-white hover:bg-mpwr-red-dark",
+    outline: "border border-mpwr-gray-200 text-mpwr-text hover:border-mpwr-text hover:bg-mpwr-off-white",
+    "hero-primary": "bg-mpwr-red text-white hover:bg-mpwr-red-dark",
+    "hero-glass": "border border-white/30 bg-white/10 text-white backdrop-blur-sm hover:border-white/50 hover:bg-white/20",
+  };
+  const baseStyles = variantStyles[variant];
 
   return (
     <motion.div
