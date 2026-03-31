@@ -58,7 +58,7 @@ export default function Home() {
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="font-heading text-3xl font-semibold leading-[1.1em] tracking-tight text-white md:text-6xl lg:text-[72px]"
+              className="font-heading text-[48px] font-semibold leading-[1.1em] tracking-tight text-white md:text-6xl lg:text-[72px]"
             >
               Operators who invest. Partners who{" "}
               <span className="text-mpwr-red">execute.</span>
