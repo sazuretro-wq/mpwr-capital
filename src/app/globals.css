@@ -102,24 +102,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFFFFF;
 }
 
-/* ===== Dark Mode vars (shared between media query and manual toggle) ===== */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --color-mpwr-white: #0F0F0F;
-    --color-mpwr-off-white: #161616;
-    --color-mpwr-warm-gray: #1C1C1C;
-    --color-mpwr-gray-100: #262626;
-    --color-mpwr-gray-200: #333333;
-    --color-mpwr-gray-300: #666666;
-    --color-mpwr-text: #E8E5E1;
-    --color-mpwr-text-secondary: #A09B94;
-    --color-mpwr-text-muted: #777270;
-    --color-mpwr-border: rgba(255, 255, 255, 0.08);
-    --color-mpwr-red: #E04040;
-  }
-}
-
-/* Manual dark override (overrides system light preference) */
+/* ===== Dark Mode (manual toggle only — site defaults to light) ===== */
 :root[data-theme="dark"] {
   --color-mpwr-white: #0F0F0F;
   --color-mpwr-off-white: #161616;
@@ -134,25 +117,6 @@ h1, h2, h3, h4, h5, h6 {
   --color-mpwr-red: #E04040;
 }
 
-/* Manual light override (overrides system dark preference) */
-:root[data-theme="light"] {
-  --color-mpwr-white: #FFFFFF;
-  --color-mpwr-off-white: #FAFAF9;
-  --color-mpwr-warm-gray: #F4F2EF;
-  --color-mpwr-gray-100: #E8E5E1;
-  --color-mpwr-gray-200: #D4D0CB;
-  --color-mpwr-gray-300: #A09B94;
-  --color-mpwr-text: #1A1A1A;
-  --color-mpwr-text-secondary: #5A5651;
-  --color-mpwr-text-muted: #8A8580;
-  --color-mpwr-border: rgba(0, 0, 0, 0.08);
-  --color-mpwr-red: #D63031;
-}
-
 /* Surface card dark mode */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .surface-card { background: var(--color-mpwr-off-white); }
-  :root:not([data-theme="light"]) .surface-card:hover { background: var(--color-mpwr-warm-gray); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
-}
 :root[data-theme="dark"] .surface-card { background: var(--color-mpwr-off-white); }
 :root[data-theme="dark"] .surface-card:hover { background: var(--color-mpwr-warm-gray); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }

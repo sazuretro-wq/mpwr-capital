@@ -29,9 +29,7 @@ export default function ThemeToggle({ onDark = false }: ThemeToggleProps) {
 
   useEffect(() => {
     const saved = localStorage.getItem("mpwr-theme");
-    const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const dark = saved === "dark" || (!saved && systemDark);
-    setIsDark(dark);
+    setIsDark(saved === "dark");
   }, []);
 
   const toggle = () => {

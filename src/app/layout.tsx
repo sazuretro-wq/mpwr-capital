@@ -28,6 +28,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `(function(){var t=localStorage.getItem('mpwr-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})();` }} />
+      </head>
       <body className={`${outfit.variable} ${inter.variable} antialiased`}>
         <Navbar />
         <main>{children}</main>
