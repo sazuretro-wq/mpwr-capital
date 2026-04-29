@@ -12,10 +12,10 @@ const companies = [
       "A professional parking management and mobility services platform serving large venues and complex environments. Delivers operationally intensive parking solutions, logistics coordination, and customer experience management for institutional and public-sector clients.",
   },
   {
-    name: "TrueNorth Facilities Solutions",
-    website: "www.truenorthfac.com",
+    name: "Republic Facilities",
+    website: "www.republicfacilities.com",
     description:
-      "A facilities services platform providing integrated building services to commercial, institutional, and public-sector clients. Emphasizes reliability, compliance, and scalable operations across multiple service lines.",
+      "A tech-enabled facility services partner specializing in large-scale, mission-critical environments including airports, hospitals, universities, and government campuses. Delivers integrated operations across parking, shuttles, janitorial, maintenance, and emergency response, combining technology and operational expertise to scale reliably for institutional clients.",
   },
 ];
 
