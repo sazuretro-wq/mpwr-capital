@@ -6,10 +6,10 @@ import MagneticButton from "@/components/MagneticButton";
 
 const companies = [
   {
-    name: "Everpark",
+    name: "Everpark Integrated Services",
     website: "www.everpark.com",
     description:
-      "A professional parking management and mobility services platform serving large venues and complex environments. Delivers operationally intensive parking solutions, logistics coordination, and customer experience management for institutional and public-sector clients.",
+      "A technology enabled facilities services platform delivering integrated solutions across parking, janitorial, maintenance, and site operations. Serves large scale venues and complex environments with a focus on operational excellence, logistics coordination, and consistent service delivery for institutional and public sector clients.",
   },
   {
     name: "Republic Facilities",
